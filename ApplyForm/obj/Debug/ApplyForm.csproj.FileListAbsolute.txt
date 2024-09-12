@@ -1,0 +1,10 @@
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\bin\Debug\ApplyForm.exe.config
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\bin\Debug\ApplyForm.exe
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\bin\Debug\ApplyForm.pdb
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.csproj.AssemblyReference.cache
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.Form1.resources
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.Properties.Resources.resources
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.csproj.GenerateResource.cache
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.csproj.CoreCompileInputs.cache
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.exe
+C:\Users\61vah\source\repos\ApplyForm\ApplyForm\obj\Debug\ApplyForm.pdb
