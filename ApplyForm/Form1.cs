@@ -176,131 +176,139 @@ namespace ApplyForm
 
         private void btn_get_Click(object sender, EventArgs e)
         {
-            string filename = tb_name.Text + "_" + tb_surname.Text + "_" + mtb_IdNumber.Text + ".w4yt";
-            string path = $"Personnel Folder/{filename}";
-            StreamReader sr = new StreamReader($"Personnel Folder/{lb_allPersonals.SelectedItem.ToString()}");
-            string line;
-            int lineIndex = 0;
-            
-            while ((line = sr.ReadLine())!=null)
+            if (lb_allPersonals.SelectedItem!=null)
             {
-                lineIndex++;
-                switch (lineIndex)
-                {
-                    case 1:
-                        tb_name.Text = line;
-                        break;
-                    case 2:
-                        tb_surname.Text = line;
-                        break;
-                    case 3:
-                        mtb_IdNumber.Text= line;
-                        break;
-                    case 4:
-                        if (line=="Male")
-                        {
-                            rb_male.Checked = true;
-                        }
-                        else if (line == "Female")
-                        {
-                            rb_female.Checked = true;
-                        }
-                        
-                        break;
-                    case 5:
-                        cb_city.SelectedItem = line;
-                        break;
-                    case 6:
-                        dtp_date.Text = line;
-                        break;
-                    case 7:
-                        mt_phone.Text = line;
-                        break;
-                    case 8:
-                        tb_mail.Text = line;
-                        break;
-                    case 9:
-                        tb_adress.Text = line;
-                        break;
-                    case 10:
-                        if (line == "Yes")
-                        {
-                            rb_FYes.Checked = true;
-                        }
-                        else if (line == "No")
-                        {
-                            rb_FNo.Checked = true;
-                        }
-                        break;
-                    case 11:
-                        pb_image.ImageLocation = line;
-                        pb_image2.ImageLocation = line;
-                        pb_image.SizeMode = PictureBoxSizeMode.Zoom;
-                        pb_image2.SizeMode = PictureBoxSizeMode.Zoom;
-                        break;
-                    case 12:
-                        tb_weight.Text = line;
-                        break;
-                    case 13:
-                        cb_hairType.Text = line;
-                        break;
-                    case 14:
-                        tb_height.Text = line;
-                        break;
-                    case 15:
-                        cb_eyeColor.Text = line;
-                        break;
-                    case 16:
-                        cb_bodyType.Text = line;
-                        break;
-                    case 17:
-                        cb_skinColor.Text = line;
-                        break;
-                    case 18:
-                        tb_pushUps.Text = line;
-                        break;
-                    case 19:
-                        tb_sitUps.Text = line;
-                        break;
-                    case 20:
-                        tb_pullUps.Text = line;
-                        break;
-                    case 21:
-                        tb_flex.Text = line;
-                        break;
-                    case 22:
-                        tb_bmi.Text = line;
-                        break;
-                    case 23:
-                        lbl_status.Text = line;
-                        break;
-                    case 24:
-                        tb_note.Text = line;
-                        break;
-                    case 25:
-                        if (line == "Qualified")
-                        {
-                            rb_qualified.Checked = true;
-                        }
-                        else if (line == "Not Qualified")
-                        {
-                            rb_notQualified.Checked = true;
-                        }
-                        break;
-                }
-                
+                string filename = tb_name.Text + "_" + tb_surname.Text + "_" + mtb_IdNumber.Text + ".w4yt";
+                string path = $"Personnel Folder/{filename}";
+                StreamReader sr = new StreamReader($"Personnel Folder/{lb_allPersonals.SelectedItem.ToString()}");
+                string line;
+                int lineIndex = 0;
 
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lineIndex++;
+                    switch (lineIndex)
+                    {
+                        case 1:
+                            tb_name.Text = line;
+                            break;
+                        case 2:
+                            tb_surname.Text = line;
+                            break;
+                        case 3:
+                            mtb_IdNumber.Text = line;
+                            break;
+                        case 4:
+                            if (line == "Male")
+                            {
+                                rb_male.Checked = true;
+                            }
+                            else if (line == "Female")
+                            {
+                                rb_female.Checked = true;
+                            }
+
+                            break;
+                        case 5:
+                            cb_city.SelectedItem = line;
+                            break;
+                        case 6:
+                            dtp_date.Text = line;
+                            break;
+                        case 7:
+                            mt_phone.Text = line;
+                            break;
+                        case 8:
+                            tb_mail.Text = line;
+                            break;
+                        case 9:
+                            tb_adress.Text = line;
+                            break;
+                        case 10:
+                            if (line == "Yes")
+                            {
+                                rb_FYes.Checked = true;
+                            }
+                            else if (line == "No")
+                            {
+                                rb_FNo.Checked = true;
+                            }
+                            break;
+                        case 11:
+                            pb_image.ImageLocation = line;
+                            pb_image2.ImageLocation = line;
+                            pb_image.SizeMode = PictureBoxSizeMode.Zoom;
+                            pb_image2.SizeMode = PictureBoxSizeMode.Zoom;
+                            break;
+                        case 12:
+                            tb_weight.Text = line;
+                            break;
+                        case 13:
+                            cb_hairType.Text = line;
+                            break;
+                        case 14:
+                            tb_height.Text = line;
+                            break;
+                        case 15:
+                            cb_eyeColor.Text = line;
+                            break;
+                        case 16:
+                            cb_bodyType.Text = line;
+                            break;
+                        case 17:
+                            cb_skinColor.Text = line;
+                            break;
+                        case 18:
+                            tb_pushUps.Text = line;
+                            break;
+                        case 19:
+                            tb_sitUps.Text = line;
+                            break;
+                        case 20:
+                            tb_pullUps.Text = line;
+                            break;
+                        case 21:
+                            tb_flex.Text = line;
+                            break;
+                        case 22:
+                            tb_bmi.Text = line;
+                            break;
+                        case 23:
+                            lbl_status.Text = line;
+                            break;
+                        case 24:
+                            tb_note.Text = line;
+                            break;
+                        case 25:
+                            if (line == "Qualified")
+                            {
+                                rb_qualified.Checked = true;
+                            }
+                            else if (line == "Not Qualified")
+                            {
+                                rb_notQualified.Checked = true;
+                            }
+                            break;
+                    }
+
+
+                }
+                sr.Close();
+                string over = "";
+                if (tb_name.Text != "" && tb_surname.Text != "" && dtp_date.Text != "" && cb_city.Text != "" && mt_phone.Text != "" && tb_mail.Text != "")
+                {
+                    DateTime birth = Convert.ToDateTime(dtp_date.Text);
+                    TimeSpan sinceBirth = DateTime.Now - birth;
+                    string age = Convert.ToString(Convert.ToInt32(sinceBirth.TotalDays / 365));
+                    over += $"Name : {tb_name.Text}\nSurname : {tb_surname.Text}\nIndentity Number : {mtb_IdNumber.Text}\nAge : {age}\nHometown : {cb_city.Text}\nPhone : {mt_phone.Text}\nE-Mail : {tb_mail.Text}";
+                }
+                lbl_overall.Text = over;
             }
-            sr.Close();
-            string over = "";
-            if (tb_name.Text != "" && tb_surname.Text != "" && dtp_date.Text != "" && cb_city.Text != "" && mt_phone.Text != "" && tb_mail.Text != "")
+            else
             {
-                DateTime birth = Convert.ToDateTime(dtp_date.Text);
-                TimeSpan sinceBirth = DateTime.Now - birth;
-                string age = Convert.ToString(Convert.ToInt32(sinceBirth.TotalDays / 365));
-                over += $"Name : {tb_name.Text}\nSurname : {tb_surname.Text}\nIndentity Number : {mtb_IdNumber.Text}\nAge : {age}\nHometown : {cb_city.Text}\nPhone : {mt_phone.Text}\nE-Mail : {tb_mail.Text}";
+                MessageBox.Show("Please select the personnel you want to edit from the list.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            lbl_overall.Text = over;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -373,7 +381,7 @@ namespace ApplyForm
         {
             if (tb_name.Text != "" && tb_surname.Text != "" && mtb_IdNumber.Text != "___________" && cb_city.Text != "" && mt_phone.Text != "(___) ___-____" && tb_mail.Text != "" && tb_adress.Text != "" && tb_weight.Text != "" && tb_height.Text != "" && cb_bodyType.Text != "" && cb_hairType.Text != "" && cb_eyeColor.Text != "" && cb_skinColor.Text != "" && tb_pullUps.Text != "" && tb_pushUps.Text != "" && tb_sitUps.Text != "" && tb_flex.Text != "" && tb_mail.Text.Contains('@') && tb_mail.Text.Contains('.') && !tb_mail.Text.Contains(' '))
             {
-                if (lb_allPersonals.SelectedItem.ToString()!="")
+                if (lb_allPersonals.SelectedItem.ToString()!=null)
                 {
                     string filename = lb_allPersonals.SelectedItem.ToString();
                     string path = $"Personnel Folder/{filename}";
@@ -470,64 +478,72 @@ namespace ApplyForm
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure to delete this personnel file ? ", "Delete Personnel",MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dr==DialogResult.Yes)
+            if (lb_allPersonals.SelectedItem != null)
             {
-                string filename = lb_allPersonals.SelectedItem.ToString();
-                string path = $"Personnel Folder/{filename}";
-                if (System.IO.File.Exists(path))
+                DialogResult dr = MessageBox.Show("Are you sure to delete this personnel file ? ", "Delete Personnel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
                 {
-                    System.IO.File.Delete(path);
-                    MessageBox.Show("Personnel file has been succesfully deleted.", "Info", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    tb_name.Text = "";
-                    tb_surname.Text = default;
-                    mtb_IdNumber.Text = default;
-                    rb_male.Checked = true;
-                    cb_city.SelectedItem = default;
-                    dtp_date.Text = default;
-                    mt_phone.Text = default;
-                    tb_mail.Text = default;
-                    tb_adress.Text = default;
-                    rb_FNo.Checked = true;
-                    pb_image.ImageLocation = default;
-                    pb_image2.ImageLocation = default;
-                    tb_weight.Text = default;
-                    tb_height.Text = default;
-                    cb_eyeColor.Text = default;
-                    cb_bodyType.Text = default;
-                    cb_skinColor.Text = default;
-                    tb_pushUps.Text = default;
-                    tb_sitUps.Text = default;
-                    tb_pullUps.Text = default;
-                    tb_flex.Text = default;
-                    tb_bmi.Text = default;
-                    lbl_status.Text = default;
-                    tb_note.Text = default;
-                    rb_qualified.Checked = default;
-                    rb_notQualified.Checked = default;
+                    string filename = lb_allPersonals.SelectedItem.ToString();
+                    string path = $"Personnel Folder/{filename}";
+                    if (System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Delete(path);
+                        MessageBox.Show("Personnel file has been succesfully deleted.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tb_name.Text = "";
+                        tb_surname.Text = default;
+                        mtb_IdNumber.Text = default;
+                        rb_male.Checked = true;
+                        cb_city.SelectedItem = default;
+                        dtp_date.Text = default;
+                        mt_phone.Text = default;
+                        tb_mail.Text = default;
+                        tb_adress.Text = default;
+                        rb_FNo.Checked = true;
+                        pb_image.ImageLocation = default;
+                        pb_image2.ImageLocation = default;
+                        tb_weight.Text = default;
+                        tb_height.Text = default;
+                        cb_eyeColor.Text = default;
+                        cb_bodyType.Text = default;
+                        cb_skinColor.Text = default;
+                        tb_pushUps.Text = default;
+                        tb_sitUps.Text = default;
+                        tb_pullUps.Text = default;
+                        tb_flex.Text = default;
+                        tb_bmi.Text = default;
+                        lbl_status.Text = default;
+                        tb_note.Text = default;
+                        rb_qualified.Checked = default;
+                        rb_notQualified.Checked = default;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, please try again later.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    DirectoryInfo di = new DirectoryInfo("Personnel Folder");
+                    FileInfo[] files = di.GetFiles();
+                    lb_allPersonals.Text = "";
+                    lb_allPersonals.Items.Clear();
+                    foreach (FileInfo item in files)
+                    {
+                        lb_allPersonals.Items.Add(item.Name);
+                    }
                 }
-                else
+                string over = "";
+                if (tb_name.Text != "" && tb_surname.Text != "" && dtp_date.Text != "" && cb_city.Text != "" && mt_phone.Text != "" && tb_mail.Text != "")
                 {
-                    MessageBox.Show("Error, please try again later.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DateTime birth = Convert.ToDateTime(dtp_date.Text);
+                    TimeSpan sinceBirth = DateTime.Now - birth;
+                    string age = Convert.ToString(Convert.ToInt32(sinceBirth.TotalDays / 365));
+                    over += $"Name : {tb_name.Text}\nSurname : {tb_surname.Text}\nIndentity Number : {mtb_IdNumber.Text}\nAge : {age}\nHometown : {cb_city.Text}\nPhone : {mt_phone.Text}\nE-Mail : {tb_mail.Text}";
                 }
-                DirectoryInfo di = new DirectoryInfo("Personnel Folder");
-                FileInfo[] files = di.GetFiles();
-                lb_allPersonals.Text = "";
-                lb_allPersonals.Items.Clear();
-                foreach (FileInfo item in files)
-                {
-                    lb_allPersonals.Items.Add(item.Name);
-                }
+                lbl_overall.Text = over;
             }
-            string over = "";
-            if (tb_name.Text != "" && tb_surname.Text != "" && dtp_date.Text != "" && cb_city.Text != "" && mt_phone.Text != "" && tb_mail.Text != "")
+            else
             {
-                DateTime birth = Convert.ToDateTime(dtp_date.Text);
-                TimeSpan sinceBirth = DateTime.Now - birth;
-                string age = Convert.ToString(Convert.ToInt32(sinceBirth.TotalDays / 365));
-                over += $"Name : {tb_name.Text}\nSurname : {tb_surname.Text}\nIndentity Number : {mtb_IdNumber.Text}\nAge : {age}\nHometown : {cb_city.Text}\nPhone : {mt_phone.Text}\nE-Mail : {tb_mail.Text}";
+                MessageBox.Show("Please select the personnel you want to delete from the list.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            lbl_overall.Text = over;
+
 
 
         }

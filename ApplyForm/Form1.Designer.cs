@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.bt_save = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -100,7 +101,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.openPicDialog = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btn_clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -141,6 +141,16 @@
             this.splitContainer1.SplitterDistance = 596;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Location = new System.Drawing.Point(252, 704);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(105, 30);
+            this.btn_clear.TabIndex = 1;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_edit
             // 
@@ -893,7 +903,7 @@
             this.pb_image2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb_image2.Location = new System.Drawing.Point(26, 35);
             this.pb_image2.Name = "pb_image2";
-            this.pb_image2.Size = new System.Drawing.Size(201, 238);
+            this.pb_image2.Size = new System.Drawing.Size(178, 238);
             this.pb_image2.TabIndex = 19;
             this.pb_image2.TabStop = false;
             // 
@@ -1015,16 +1025,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // btn_clear
-            // 
-            this.btn_clear.Location = new System.Drawing.Point(252, 704);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(105, 30);
-            this.btn_clear.TabIndex = 1;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // Form1
             // 
